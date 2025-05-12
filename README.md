@@ -148,6 +148,22 @@ Failing to do so may cause the devices to hang or become unresponsive.
 
 ---
 
+### Step 8: Open and review the CSV data file
+
+After completing the measurement, open the saved `.csv` file using Excel, a text editor, or any data analysis software.
+
+![DATA FILE](./img/data_file.png)
+
+The file contains:
+- All parameters selected during measurement (e.g., resistance, capacitance, force)
+- A timestamp column representing the measurement timeline
+
+> ⏱ **Note:**  
+> The time values do **not** start from zero.  
+> The timestamp reflects the elapsed time **since the moment you clicked the START button**, so the first row typically begins at a non-zero value.
+
+---
+
 ## Chapter 3: Notes
 
 - If a software error occurs during operation, click **"Continue"** to proceed.If the error persists, please click **"Stop"** use **NI MAX** to check whether the devices are properly connected and recognized by the system.
