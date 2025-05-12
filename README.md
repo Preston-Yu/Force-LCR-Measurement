@@ -14,20 +14,25 @@ Ensure that both the LCR meter and the force measurement device are powered on a
 ---
 
 ### Step 2: Launch NI MAX
+
+![NI MAX](./img/ni_max.png)
 Open **NI Measurement & Automation Explorer (NI MAX)** on your PC.
 
-![NI MAX](./img/ni_max.jpg)
+
 
 ---
 
 ### Step 3: Click “Devices and Interfaces” and wait for detection
+![NI MAX Devices](./img/nimax_devices.png)
 In NI MAX, click on the left-side menu **Devices and Interfaces**. Wait for all connected hardware to be detected.
 
-![NI MAX Devices](./img/nimax_devices.jpg)
+
 
 ---
 
 ### Step 4: Confirm connections and note VISA names or COM ports
+![NI MAX Devices Name1](./img/nimax_devices_name1.png)
+![NI MAX Devices Name2](./img/nimax_devices_name2.png)
 Ensure both the LCR meter and force measurement device are listed. Note their respective VISA resource names (e.g., `USB0::0xXXXX::...`) or COM port numbers (e.g., `COM3`).
 
 ---
@@ -35,45 +40,69 @@ Ensure both the LCR meter and force measurement device are listed. Note their re
 ## Chapter 2: Measurement
 
 ### Step 1: Open `Lab1.0.vi`
+![Lab 1.0](./img/Lab1.0.png)
 Launch LabVIEW and open the file named `Lab1.0.vi`.
 
 ---
 
 ### Step 2: If prompted, click “Run”
+
+![LabVIEW Run](./img/labview_run.png)
 If LabVIEW shows a warning or dialog, click the **Run** button to start the VI.
 
-![LabVIEW Run](./img/labview_run.jpg)
+
 
 ---
 
 ### Step 3: Main interface
+
+![Main UI](./img/main_ui.png)
 The main interface contains:
 - Device selection dropdowns
 - Parameter settings (frequency, sample count, etc.)
-- Real-time data plot
-- Log window
 
-![Main UI](./img/main_ui.jpg)
+
 
 ---
 
 ### Step 4: Select the correct VISA names or COM ports
+
+![Select Devices Name1](./img/select_devices_name1.png)
+![Select Devices Name2](./img/select_devices_name2.png)
 From the dropdown lists, select the appropriate VISA resource or serial port for the LCR meter and the force measurement device.
 
 ---
 
 ### Step 5: Set measurement parameters (cannot be changed after starting)
+
+![Parameters1](./img/parameters1.png)
+![Parameters2](./img/parameters2.png)
+![Parameters3](./img/parameters3.png)
 Choose measurement settings such as frequency, integration time, and number of data points.  
 ⚠️ **These settings are locked once measurement begins.**
 
 ---
 
 ### Step 6: Click “START” to begin and select data save path
-Click the **START** button. You will be prompted to choose a location to save the CSV output file.
+
+
+Before starting the measurement, set the **software sampling frequency** in the corresponding input box.  
+This defines how often the program polls data from the connected devices.
+⚠️ **Important:**  
+If the software sampling frequency is **higher than the actual data update rate of the device**, duplicated values may occur in the recorded data.  
+Make sure the sampling frequency is properly configured based on your device’s performance and output interval.
+
+![START](./img/start.png)
+Click the **START** button to begin the measurement. You will be prompted to choose a file path to save the output CSV file.
+
+
+
 
 ---
 
 ### Step 7: Click “STOP” to end the measurement
+
+![STOP](./img/stop.png)
 ⚠️ **Important:** Always click the **STOP** button to end the measurement before closing the program.  
 Failing to do so may cause the devices to hang or become unresponsive.
 
@@ -81,10 +110,9 @@ Failing to do so may cause the devices to hang or become unresponsive.
 
 ## Chapter 3: Notes
 
-- Confirm all devices are properly connected before each session.
-- Avoid using low sampling rates unless necessary, as this may cause data lag.
-- If the devices do not respond, try restarting LabVIEW or power-cycling the hardware.
-- This program is tested with LCR meters and force sensors via VISA/Serial protocols. Custom drivers may be needed for other brands.
+- If a software error occurs during operation, click **"Continue"** to proceed.
+  - If the error persists, please use **NI MAX** to check whether the devices are properly connected and recognized by the system.
+- If you encounter any bugs or have feature requests, please feel free to contact **YU**.
 
 ---
 
@@ -93,4 +121,3 @@ Failing to do so may cause the devices to hang or become unresponsive.
 This LabVIEW program is provided for research and academic use. For commercial licensing, please contact the author.
 
 ---
-
