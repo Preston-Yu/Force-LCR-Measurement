@@ -159,7 +159,6 @@ The file contains:
 - A timestamp column representing the measurement timeline
 
 > ⏱ **Note:**  
-> The time values do **not** start from zero.  
 > The timestamp reflects the elapsed time **since the moment you clicked the START button**, so the first row typically begins at a non-zero value.
 
 ---
