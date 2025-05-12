@@ -100,8 +100,6 @@ Below is a brief description of the common parameters:
 - `C` – **Capacitance**
 - `Cp` – **Parallel capacitance**
 - `Cs` – **Series capacitance**
-- `Q` – **Quality factor**
-- `D` – **Dissipation factor**
 
 > 📘 *For more detailed definitions and appropriate usage of these parameters, please refer to the official user manual of your LCR meter.*
 
