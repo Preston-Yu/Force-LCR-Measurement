@@ -110,9 +110,7 @@ The connected devices (such as the LCR meter and force measurement unit) offer a
 These frequencies **cannot be customized manually**, so you must select from the available options.
 
 - It is recommended to choose a sampling frequency that is **slightly higher than your target rate**.
-- ⚠️ Avoid unnecessarily high frequencies, as they may introduce noise or increase CPU load without improving data quality.
-
-> 📘 *Please refer to your device's official documentation for the exact list of supported sampling frequencies.*
+- ⚠️ Avoid unnecessarily high frequencies, as they may introduce noise.
 
 ⚠️ **These settings are locked once measurement begins.**
 
